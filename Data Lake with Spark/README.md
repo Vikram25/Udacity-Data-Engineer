@@ -42,7 +42,7 @@ A Star Schema would be required for optimized queries on song play queries
 
 **Fact Table
 
-songplays - records in event data associated with song plays i.e. records with page NextSong songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
+***songplays*** - records in event data associated with song plays i.e. records with page NextSong songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
 **Dimension Tables
 
@@ -56,7 +56,8 @@ songplays - records in event data associated with song plays i.e. records with p
 
 ## Project Template
 
-Project Template include three files:
+Project Template include three files
+------------------------------------
 
 1. etl.py reads data from S3, processes that data using Spark and writes them back to S3
 
@@ -64,14 +65,16 @@ Project Template include three files:
 
 3. README.md provides discussion on your process and decisions
 
-## ETL Pipeline
+ETL Pipeline
+------------
 
 1. Load the credentials from dl.cfg
 2. Load the Data which are in JSON Files(Song Data and Log Data)
 3. After loading the JSON Files from S3 4.Use Spark process this JSON files and then generate a set of Fact and Dimension Tables
 4. Load back these dimensional process to S3
 
-## Final Instructions
+Final Instructions
+------------------
 
 1. Write correct keys in dl.cfg
 2. Open Terminal write the command "python etl.py"
